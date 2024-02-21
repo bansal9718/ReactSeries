@@ -7,10 +7,13 @@ function App() {
 
   const addValue = () => {
     // console.log("clicked", counter);
-    if (counter == 3) {
+    if (counter == 20) {
       setCounter(3);
     } else {
-      setCounter(counter++);
+      setCounter((prevCounter) => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
     }
   };
 
@@ -19,7 +22,7 @@ function App() {
     if (counter == 0) {
       setCounter(0);
     } else {
-      setCounter(counter--);
+      setCounter(counter - 1);
     }
   };
   return (
