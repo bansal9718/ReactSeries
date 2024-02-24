@@ -7,9 +7,8 @@ function App() {
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
-
+  
   const currencyInfo = useCurrencyInfo(from);
-
   const options = Object.keys(currencyInfo);
 
   const swap = () => {
@@ -43,7 +42,7 @@ function App() {
                 amount={amount}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => {
-                  setAmount(amount);
+                  setFrom(currency);
                 }}
                 onAmountChange={(amount) => {
                   setAmount(amount);
