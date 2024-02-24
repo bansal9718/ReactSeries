@@ -1,4 +1,3 @@
-import Chai from "./chai";
 import { useState } from "react";
 
 function App() {
@@ -9,12 +8,10 @@ function App() {
     // console.log("clicked", counter);
     if (counter == 20) {
       setCounter(3);
-    } else {
-      setCounter((prevCounter) => prevCounter + 1);
-      setCounter((prevCounter) => prevCounter + 1);
-      setCounter((prevCounter) => prevCounter + 1);
-      setCounter((prevCounter) => prevCounter + 1);
+    } else{
+      setCounter(counter++)
     }
+      
   };
 
   const removeValue = () => {
@@ -22,11 +19,11 @@ function App() {
     if (counter == 0) {
       setCounter(0);
     } else {
-      setCounter(counter - 1);
+      setCounter(counter--);
     }
   };
   return (
-    <>
+   <>
       <h1>chai aur react</h1>
       <h2>Counter Value : {counter}</h2>
       <button onClick={addValue}>Add Value {counter}</button>
